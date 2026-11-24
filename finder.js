@@ -10,6 +10,7 @@ function recommendPlants(event) {
     const light = document.querySelector('input[name="light"]:checked').value;
     const pet = document.querySelector('input[name="pet-safe"]:checked').value;
     const care = document.querySelector('input[name="care"]:checked').value;
+    const placement = document.querySelector('input[name="placement"]:checked').value;
     let count = 0;
 
     // Check whether each plant matches every answer.
@@ -19,7 +20,9 @@ function recommendPlants(event) {
         const matchesPet = pet === "any" || card.getAttribute("data-pet") === "yes";
         const matchesCare = care === "regular" || card.getAttribute("data-care") === "low";
 
-        if (matchesLight && matchesPet && matchesCare) {
+        const matchesPlacement = placement === "any" || card.getAttribute("data-placement") === placement;
+
+        if (matchesLight && matchesPet && matchesCare && matchesPlacement) {
             card.hidden = false;
             count++;
         } else {
@@ -38,7 +41,7 @@ function resetResults() {
     for (let i = 0; i < cards.length; i++) {
         cards[i].hidden = true;
     }
-    message.textContent = "Answer the three questions to find matching plants.";
+    message.textContent = "Answer the four questions to find matching plants.";
 }
 
 quiz.addEventListener("submit", recommendPlants);

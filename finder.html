@@ -20,7 +20,7 @@
     </header>
     <main>
         <h1>Find your perfect plant</h1>
-        <p>Answer three questions about your home.</p>
+        <p>Answer four questions about your home.</p>
         <form class="box" id="plant-quiz">
             <h3>1. How much light does your home receive?</h3>
             <label><input type="radio" name="light" value="low" required> Low indirect light</label>
@@ -32,29 +32,33 @@
             <h3>3. How much care can you provide?</h3>
             <label><input type="radio" name="care" value="low" required> Low maintenance</label>
             <label><input type="radio" name="care" value="regular"> Regular care</label>
+            <h3>4. What type of plant do you prefer?</h3>
+            <label><input type="radio" name="placement" value="any" required> Any type</label>
+            <label><input type="radio" name="placement" value="upright"> Upright plant</label>
+            <label><input type="radio" name="placement" value="hanging"> Hanging plant</label>
             <br>
             <button type="submit">Find plants</button>
             <button type="reset">Reset</button>
         </form>
         <section class="box" id="recommendation-results">
             <h2>Your recommendations</h2>
-            <p id="recommendation-message" aria-live="polite">Answer the three questions to find matching plants.</p>
-            <article class="recommendation-card" data-light="low medium" data-pet="yes" data-care="regular" hidden>
+            <p id="recommendation-message" aria-live="polite">Answer the four questions to find matching plants.</p>
+            <article class="recommendation-card" data-light="low medium" data-pet="yes" data-care="regular" data-placement="hanging" hidden>
                 <img class="care-image" src="images/spider.png" alt="Spider plant">
                 <h3>Spider plant</h3>
-                <p>Prefers indirect light and lightly moist soil. Listed as non-toxic to cats and dogs.</p>
+                <p>Prefers indirect light and lightly moist soil. Suitable for hanging planters. Listed as non-toxic to cats and dogs.</p>
                 <a class="button" href="care.html#spider-plant">View care guide</a>
             </article>
-            <article class="recommendation-card" data-light="low medium bright" data-pet="no" data-care="low" hidden>
+            <article class="recommendation-card" data-light="low medium bright" data-pet="no" data-care="low" data-placement="upright" hidden>
                 <img class="care-image" src="images/snake.png" alt="Snake plant">
                 <h3>Snake plant</h3>
-                <p>Tolerates low light and partial sun. Requires less frequent watering. Toxic to cats and dogs.</p>
+                <p>Tolerates low light and partial sun. Upright leaves suit a standing pot. Requires less frequent watering. Toxic to cats and dogs.</p>
                 <a class="button" href="care.html#snake-plant">View care guide</a>
             </article>
-            <article class="recommendation-card" data-light="low medium" data-pet="no" data-care="low" hidden>
+            <article class="recommendation-card" data-light="low medium" data-pet="no" data-care="low" data-placement="hanging" hidden>
                 <img class="care-image" src="images/pothos.png" alt="Golden pothos">
                 <h3>Golden pothos</h3>
-                <p>Prefers indirect light and can tolerate low light. Let soil dry between watering. Toxic to cats and dogs.</p>
+                <p>Prefers indirect light and can tolerate low light. Trailing leaves suit hanging planters. Let soil dry between waterings. Toxic to cats and dogs.</p>
                 <a class="button" href="care.html#pothos">View care guide</a>
             </article>
             <p><a href="shop.html">Browse all plants</a></p>
