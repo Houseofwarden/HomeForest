@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Finder - HomeForest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>HomeForest</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="finder.html">Plant Finder</a>
+            <a href="care.html">Care Guide</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Find your perfect plant</h1>
+        <p>Answer three questions about your home.</p>
+        <form class="box" id="plant-quiz">
+            <h3>1. How much light does your home receive?</h3>
+            <label><input type="radio" name="light" value="low" required> Low indirect light</label>
+            <label><input type="radio" name="light" value="medium"> Medium indirect light</label>
+            <label><input type="radio" name="light" value="bright"> Bright balcony (some direct sun)</label>
+            <h3>2. Do you need a plant non-toxic to cats and dogs?</h3>
+            <label><input type="radio" name="pet-safe" value="yes" required> Yes</label>
+            <label><input type="radio" name="pet-safe" value="any"> No preference</label>
+            <h3>3. How much care can you provide?</h3>
+            <label><input type="radio" name="care" value="low" required> Low maintenance</label>
+            <label><input type="radio" name="care" value="regular"> Regular care</label>
+            <br>
+            <button type="submit">Find plants</button>
+            <button type="reset">Reset</button>
+        </form>
+        <section class="box" id="recommendation-results">
+            <h2>Your recommendations</h2>
+            <p id="recommendation-message" aria-live="polite">Answer the three questions to find matching plants.</p>
+            <article class="recommendation-card" data-light="low medium" data-pet="yes" data-care="regular" hidden>
+                <img class="care-image" src="images/spider.png" alt="Spider plant">
+                <h3>Spider plant</h3>
+                <p>Prefers indirect light and lightly moist soil. Listed as non-toxic to cats and dogs.</p>
+                <a class="button" href="care.html#spider-plant">View care guide</a>
+            </article>
+            <article class="recommendation-card" data-light="low medium bright" data-pet="no" data-care="low" hidden>
+                <img class="care-image" src="images/snake.png" alt="Snake plant">
+                <h3>Snake plant</h3>
+                <p>Tolerates low light and partial sun. Requires less frequent watering. Toxic to cats and dogs.</p>
+                <a class="button" href="care.html#snake-plant">View care guide</a>
+            </article>
+            <article class="recommendation-card" data-light="low medium" data-pet="no" data-care="low" hidden>
+                <img class="care-image" src="images/pothos.png" alt="Golden pothos">
+                <h3>Golden pothos</h3>
+                <p>Prefers indirect light and can tolerate low light. Let soil dry between watering. Toxic to cats and dogs.</p>
+                <a class="button" href="care.html#pothos">View care guide</a>
+            </article>
+            <p><a href="shop.html">Browse all plants</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>HomeForest - Bring nature home.</p>
+    </footer>
+    <script src="finder.js"></script>
+</body>
+</html>

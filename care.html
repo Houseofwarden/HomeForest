@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Guide - HomeForest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>HomeForest</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="finder.html">Plant Finder</a>
+            <a href="care.html">Care Guide</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Plant care guide</h1>
+        <p id="cart-message" aria-live="polite"></p>
+        <p><a href="cart.html">View cart</a></p>
+        <p>Click Watering or Sunlight to read the care instructions.</p>
+        <section class="box" id="spider-plant">
+            <h2>Spider plant</h2>
+            <img class="care-image" src="images/spider.png" alt="Spider plant">
+            <p><strong>Price:</strong> &#8377;299</p>
+            <p><strong>Pet safety:</strong> Non-toxic to cats and dogs.</p>
+            <details><summary>Watering</summary><p>Keep soil lightly moist, with less watering in winter. Use a pot with drainage.</p></details>
+            <details><summary>Sunlight</summary><p>Medium indirect light; tolerates shade. Avoid direct sun.</p></details>
+            <p><a href="accessories.html?plant=spider-plant">Choose a planter</a>
+                    <button type="button" onclick="addToCart('spider-plant')">Add to cart</button></p>
+            <p>Sources: <a href="https://plants.ces.ncsu.edu/plants/chlorophytum-comosum/">NC State Extension</a> | <a href="https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/spider-plant">ASPCA pet safety</a> | <a href="https://pubmed.ncbi.nlm.nih.gov/31695112/">Indoor air-quality research</a></p>
+        </section>
+        <section class="box" id="snake-plant">
+            <h2>Snake plant</h2>
+            <img class="care-image" src="images/snake.png" alt="Snake plant">
+            <p><strong>Price:</strong> &#8377;399</p>
+            <p><strong>Pet safety:</strong> Toxic to cats and dogs.</p>
+            <details><summary>Watering</summary><p>Allow soil to dry between waterings. Reduce watering in winter and avoid soggy soil.</p></details>
+            <details><summary>Sunlight</summary><p>Tolerates low light and partial direct sun. Protect from harsh conditions.</p></details>
+            <p><a href="accessories.html?plant=snake-plant">Choose a planter</a>
+                    <button type="button" onclick="addToCart('snake-plant')">Add to cart</button></p>
+            <p>Sources: <a href="https://plants.ces.ncsu.edu/plants/dracaena-trifasciata/">NC State Extension</a> | <a href="https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/snake-plant">ASPCA pet safety</a> | <a href="https://pubmed.ncbi.nlm.nih.gov/31695112/">Indoor air-quality research</a></p>
+        </section>
+        <section class="box" id="pothos">
+            <h2>Golden pothos</h2>
+            <img class="care-image" src="images/pothos.png" alt="Golden pothos">
+            <p><strong>Price:</strong> &#8377;249</p>
+            <p><strong>Pet safety:</strong> Toxic to cats and dogs.</p>
+            <details><summary>Watering</summary><p>Let the well-drained potting mix dry between waterings.</p></details>
+            <details><summary>Sunlight</summary><p>Bright indirect light is preferred; low light is tolerated.</p></details>
+            <p><a href="accessories.html?plant=pothos">Choose a planter</a>
+                    <button type="button" onclick="addToCart('pothos')">Add to cart</button></p>
+            <p>Sources: <a href="https://plants.ces.ncsu.edu/plants/epipremnum-aureum/">NC State Extension</a> | <a href="https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/golden-pothos">ASPCA pet safety</a> | <a href="https://pubmed.ncbi.nlm.nih.gov/31695112/">Indoor air-quality research</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>HomeForest - Bring nature home.</p>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>

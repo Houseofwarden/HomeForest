@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories - HomeForest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>HomeForest</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="finder.html">Plant Finder</a>
+            <a href="care.html">Care Guide</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Pots and accessories</h1>
+        <p id="cart-message" aria-live="polite"></p>
+        <p><a href="cart.html">View cart</a></p>
+        <section class="box">
+            <h2>Find a suitable planter</h2>
+            <label for="plant">Choose a plant</label>
+            <select id="plant">
+                <option value="">Choose a plant</option>
+                <option value="spider-plant">Spider plant</option>
+                <option value="snake-plant">Snake plant</option>
+                <option value="pothos">Golden pothos</option>
+            </select>
+            <label for="pot-size">Current pot diameter</label>
+            <select id="pot-size">
+                <option value="">Select size</option>
+                <option value="12">12 cm</option>
+                <option value="16">16 cm</option>
+                <option value="20">20 cm</option>
+            </select>
+            <button type="button" id="clear-pairing">Clear selection</button>
+            <p id="pairing-result" aria-live="polite"></p>
+        </section>
+        <section class="grid">
+            <article class="card accessory-card" id="ceramic-pot" data-plants="spider-plant snake-plant pothos" data-sizes="12 16">
+                <img src="images/ceramic.png" alt="Ceramic planter">
+                <h3>Ceramic planter</h3>
+                <p>16 cm diameter, with drainage and saucer. For a 12 cm upgrade or a 16 cm replacement.</p>
+                <p><strong>&#8377;349</strong></p>
+                <button type="button" onclick="addToCart('ceramic-pot')">Add to cart</button>
+            </article>
+            <article class="card accessory-card" id="drainage-tray" data-plants="spider-plant snake-plant pothos" data-sizes="12 16 20">
+                <img src="images/tray.png" alt="Drainage tray">
+                <h3>Drainage tray</h3>
+                <p>20 cm usable inner diameter, for pots up to 20 cm.</p>
+                <p><strong>&#8377;149</strong></p>
+                <button type="button" onclick="addToCart('drainage-tray')">Add to cart</button>
+            </article>
+            <article class="card accessory-card" id="macrame" data-plants="spider-plant pothos" data-sizes="12 16">
+                <img src="images/macrame.png" alt="Hanging macrame planter">
+                <h3>Hanging macrame</h3>
+                <p>Fits 12 to 16 cm pots. Recommended for trailing spider plants and pothos.</p>
+                <p><strong>&#8377;299</strong></p>
+                <button type="button" onclick="addToCart('macrame')">Add to cart</button>
+            </article>
+        </section>
+        <p>Sample accessory dimensions and prices. Add desired accessories to your cart.</p>
+    </main>
+    <footer>
+        <p>HomeForest - Bring nature home.</p>
+    </footer>
+    <script src="accessories.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

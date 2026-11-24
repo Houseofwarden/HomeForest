@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - HomeForest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>HomeForest</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="finder.html">Plant Finder</a>
+            <a href="care.html">Care Guide</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Shop indoor plants</h1>
+        <p id="cart-message" aria-live="polite"></p>
+        <p><a href="cart.html">View cart</a></p>
+        <p>Browse our houseplants. Prices are for demonstration.</p>
+        <!-- Search and filter controls. -->
+        <section class="box">
+            <h2>Search and filter</h2>
+            <label for="plant-search">Search by name</label>
+            <input type="text" id="plant-search" placeholder="Search plants">
+            <label for="light">Light</label>
+            <select id="light">
+                <option value="all">All light conditions</option>
+                <option value="low">Low indirect light</option>
+                <option value="medium">Medium indirect light</option>
+                <option value="bright">Bright balcony</option>
+            </select>
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty">
+                <option value="all">All levels</option>
+                <option value="beginner">Beginner friendly</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="expert">Plant expert</option>
+            </select>
+            <label for="pet-safety">Pet safety</label>
+            <select id="pet-safety">
+                <option value="all">All plants</option>
+                <option value="yes">Non-toxic to cats and dogs</option>
+            </select>
+            <button type="button" id="clear-filters">Clear filters</button>
+            <p id="result-count" aria-live="polite"></p>
+        </section>
+        <p>Air-purification rating: insufficient evidence for a reliable home-air rating. <a href="https://pubmed.ncbi.nlm.nih.gov/31695112/">Research</a></p>
+        <section class="grid">
+            <article class="card plant-card" id="spider-plant" data-name="Spider plant" data-light="low medium" data-level="beginner" data-pet="yes">
+                <img src="images/spider.png" alt="Spider plant">
+                <h3>Spider plant</h3>
+                <p>Arching green and cream leaves</p>
+                <p>Beginner friendly</p>
+                <p><strong>&#8377;299</strong></p>
+                <a class="button" href="care.html#spider-plant">Care guide</a>
+                    <button type="button" onclick="addToCart('spider-plant')">Add to cart</button>
+            </article>
+            <article class="card plant-card" id="snake-plant" data-name="Snake plant" data-light="low medium bright" data-level="beginner" data-pet="no">
+                <img src="images/snake.png" alt="Snake plant">
+                <h3>Snake plant</h3>
+                <p>Tall, upright leaves</p>
+                <p>Beginner friendly</p>
+                <p><strong>&#8377;399</strong></p>
+                <a class="button" href="care.html#snake-plant">Care guide</a>
+                    <button type="button" onclick="addToCart('snake-plant')">Add to cart</button>
+            </article>
+            <article class="card plant-card" id="pothos" data-name="Golden pothos" data-light="low medium" data-level="beginner" data-pet="no">
+                <img src="images/pothos.png" alt="Golden pothos">
+                <h3>Golden pothos</h3>
+                <p>Trailing heart-shaped leaves</p>
+                <p>Beginner friendly</p>
+                <p><strong>&#8377;249</strong></p>
+                <a class="button" href="care.html#pothos">Care guide</a>
+                    <button type="button" onclick="addToCart('pothos')">Add to cart</button>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>HomeForest - Bring nature home.</p>
+    </footer>
+    <script src="shop.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

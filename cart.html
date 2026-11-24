@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - HomeForest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>HomeForest</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="finder.html">Plant Finder</a>
+            <a href="care.html">Care Guide</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Your cart</h1>
+        <p id="cart-message" aria-live="polite"></p>
+        <section class="box">
+            <table>
+                <thead><tr><th>Product</th><th>Quantity</th><th>Subtotal</th></tr></thead>
+                <tbody id="cart-rows">
+                    <tr id="empty-cart"><td colspan="3">Your cart is empty.</td></tr>
+                    <tr id="cart-row-spider-plant" hidden>
+                        <td>
+                            Spider plant<br>
+                            <small>&#8377;299 each</small><br>
+                            <button type="button" onclick="removeItem('spider-plant')">Remove</button>
+                        </td>
+                        <td>
+                            <button type="button" aria-label="Decrease Spider plant quantity" onclick="changeQuantity('spider-plant', -1)">-</button>
+                            <span id="quantity-spider-plant">0</span>
+                            <button type="button" aria-label="Increase Spider plant quantity" onclick="changeQuantity('spider-plant', 1)">+</button>
+                        </td>
+                        <td id="subtotal-spider-plant">&#8377;0</td>
+                    </tr>
+                    <tr id="cart-row-snake-plant" hidden>
+                        <td>
+                            Snake plant<br>
+                            <small>&#8377;399 each</small><br>
+                            <button type="button" onclick="removeItem('snake-plant')">Remove</button>
+                        </td>
+                        <td>
+                            <button type="button" aria-label="Decrease Snake plant quantity" onclick="changeQuantity('snake-plant', -1)">-</button>
+                            <span id="quantity-snake-plant">0</span>
+                            <button type="button" aria-label="Increase Snake plant quantity" onclick="changeQuantity('snake-plant', 1)">+</button>
+                        </td>
+                        <td id="subtotal-snake-plant">&#8377;0</td>
+                    </tr>
+                    <tr id="cart-row-pothos" hidden>
+                        <td>
+                            Golden pothos<br>
+                            <small>&#8377;249 each</small><br>
+                            <button type="button" onclick="removeItem('pothos')">Remove</button>
+                        </td>
+                        <td>
+                            <button type="button" aria-label="Decrease Golden pothos quantity" onclick="changeQuantity('pothos', -1)">-</button>
+                            <span id="quantity-pothos">0</span>
+                            <button type="button" aria-label="Increase Golden pothos quantity" onclick="changeQuantity('pothos', 1)">+</button>
+                        </td>
+                        <td id="subtotal-pothos">&#8377;0</td>
+                    </tr>
+                    <tr id="cart-row-ceramic-pot" hidden>
+                        <td>
+                            Ceramic planter<br>
+                            <small>&#8377;349 each</small><br>
+                            <button type="button" onclick="removeItem('ceramic-pot')">Remove</button>
+                        </td>
+                        <td>
+                            <button type="button" aria-label="Decrease Ceramic planter quantity" onclick="changeQuantity('ceramic-pot', -1)">-</button>
+                            <span id="quantity-ceramic-pot">0</span>
+                            <button type="button" aria-label="Increase Ceramic planter quantity" onclick="changeQuantity('ceramic-pot', 1)">+</button>
+                        </td>
+                        <td id="subtotal-ceramic-pot">&#8377;0</td>
+                    </tr>
+                    <tr id="cart-row-drainage-tray" hidden>
+                        <td>
+                            Drainage tray<br>
+                            <small>&#8377;149 each</small><br>
+                            <button type="button" onclick="removeItem('drainage-tray')">Remove</button>
+                        </td>
+                        <td>
+                            <button type="button" aria-label="Decrease Drainage tray quantity" onclick="changeQuantity('drainage-tray', -1)">-</button>
+                            <span id="quantity-drainage-tray">0</span>
+                            <button type="button" aria-label="Increase Drainage tray quantity" onclick="changeQuantity('drainage-tray', 1)">+</button>
+                        </td>
+                        <td id="subtotal-drainage-tray">&#8377;0</td>
+                    </tr>
+                    <tr id="cart-row-macrame" hidden>
+                        <td>
+                            Hanging macrame<br>
+                            <small>&#8377;299 each</small><br>
+                            <button type="button" onclick="removeItem('macrame')">Remove</button>
+                        </td>
+                        <td>
+                            <button type="button" aria-label="Decrease Hanging macrame quantity" onclick="changeQuantity('macrame', -1)">-</button>
+                            <span id="quantity-macrame">0</span>
+                            <button type="button" aria-label="Increase Hanging macrame quantity" onclick="changeQuantity('macrame', 1)">+</button>
+                        </td>
+                        <td id="subtotal-macrame">&#8377;0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Items: <strong id="item-count">0</strong></p>
+            <p>Subtotal: <strong id="cart-subtotal">&#8377;0</strong></p>
+            <h2>Total: <span id="cart-total">&#8377;0</span></h2>
+            <a class="button" href="shop.html">Continue shopping</a>
+            <p>Cart changes are saved automatically in your browser. This is a demonstration store.</p>
+        </section>
+    </main>
+    <footer>
+        <p>HomeForest - Bring nature home.</p>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>
