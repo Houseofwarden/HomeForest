@@ -33,7 +33,8 @@ function matchAccessories() {
     if (count === 0) {
         result.textContent = "No matching accessories in our current catalog.";
     } else {
-        result.textContent = count + " suitable accessory item(s) found. Check the product dimensions before choosing.";
+        const plantName = plant.options[plant.selectedIndex].text;
+        result.textContent = count + " accessories for " + plantName + " with a " + potSize.value + " cm pot. Check the product dimensions before choosing.";
     }
 }
 

@@ -94,6 +94,20 @@ function removeItem(id) {
     }
 }
 
+// Clear every item only after the visitor confirms.
+function clearCart() {
+    if (confirm("Remove all items from your cart?")) {
+        cart = {};
+        if (saveCart()) {
+            showCartMessage("Cart cleared.");
+            renderCart();
+        } else {
+            showCartMessage("Cart could not be saved.");
+            loadCart();
+        }
+    }
+}
+
 // All product rows are already written in cart.html.
 // JavaScript only shows the selected rows and changes their values.
 function renderCart() {
@@ -118,6 +132,7 @@ function renderCart() {
     }
 
     document.getElementById("empty-cart").hidden = count > 0;
+    document.getElementById("clear-cart").disabled = count === 0;
     document.getElementById("item-count").textContent = count;
     document.getElementById("cart-subtotal").textContent = "\u20b9" + total;
     document.getElementById("cart-total").textContent = "\u20b9" + total;
